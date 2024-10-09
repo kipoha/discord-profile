@@ -1,6 +1,4 @@
 import { userId } from "../config";
-import hype from '../assets/badges/house_brilliance_icon.png'
-import dev from '../assets/badges/active_developer_icon.png'
 
 export const getData = async () => {
   try {
@@ -18,9 +16,3 @@ export const getData = async () => {
     console.error('Error fetching data:', error)
   }
 }
-
-
-export const badgeIcons = {
-    'HOUSE_BRILLIANCE': hype, 
-    'ACTIVE_DEVELOPER': dev, 
-};

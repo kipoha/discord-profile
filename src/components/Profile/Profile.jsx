@@ -1,10 +1,10 @@
 import "./Profile.css"
 import { useState, useEffect } from 'react'
-import { getData, badgeIcons } from '../../func/getData'
-import github from '../../assets/links/github.png'
-import site from '../../assets/links/site.png'
+import { getData } from '../../func/getData'
 import discord from '../../assets/links/discord.png'
 import Loader from "../Loader/Loader"
+import { aboutMe, buttonLink, buttonName, promouns, userStatus, links, badgeIcons } from "../../config"
+import { renderAboutMeWithLinks } from "../../func/renderText"
 
 const Profile = () => {
     const [userData, setUserData] = useState(null)
@@ -47,15 +47,15 @@ const Profile = () => {
                     </div>
                 </div>
                 <div className="profile-status">
-                    <div className="user-status">kipoha doesn't exist</div>
-                    <a className="user-button" href="https://menero.kipoha.fun/">Menero</a>
+                    <div className="user-status">{userStatus}</div>
+                    <a className="user-button" href={buttonLink}>{buttonName}</a>
                 </div>
                 <div className="profile-info">
                     <h1>{userData.global_name ? userData.global_name : userData.username}</h1>
                     <div className="profile-meta">
                         <span className="username-pronouns">
                             {userData.username}
-                            <span className="pronouns">- void, core, null, not exist, kip</span>
+                            <span className="pronouns">{promouns}</span>
                         </span>
                         <div className="profile-badges">
                             {userData.badges.map((badge, index) => (
@@ -69,11 +69,9 @@ const Profile = () => {
                 <div className="profile-info-d">
                     <div className="profile-description">
                         <p style={{ fontSize: 10, marginBottom: 5, fontWeight: "bold", color: '#' }}>About me</p>
-                        <div><a href="https://menero.kipoha.fun/">https://menero.kipoha.fun/</a></div>
-                        <a href="https://core.kipoha.fun/">https://core.kipoha.fun/</a>
-                        <p>does this make sense?</p>
-                        <p>love is killing me and meeting me in a robot body in 1000 years</p>
-                        <p>Why am I still alive?...</p>
+                        <p style={{ whiteSpace: 'pre-line' }}>
+                            {renderAboutMeWithLinks(aboutMe)}
+                        </p>
                     </div>
                     <div className="profile-links">
                         <p style={{ fontSize: 10, marginTop: 30, marginBottom: -10, fontWeight: "bold", color: '#' }}>Member Since</p>
@@ -90,14 +88,12 @@ const Profile = () => {
 
                         <p style={{ fontSize: 10, marginTop: 30, fontWeight: "bold", color: '#' }}>Connections</p>
                         <div className="links">
-                            <div className="links-b">
-                                <img src={site} alt="Site" />
-                                <a href="https://kipoha.fun/">kipoha.fun</a>
-                            </div>
-                            <div className="links-b">
-                                <img src={github} alt="Github" />
-                                <a href="https://github.com/kipoha/">kipoha</a>
-                            </div>
+                            {links.map((linkItem, index) => (
+                                <div key={index} className="links-b">
+                                    <img src={linkItem.src} alt={linkItem.name} />
+                                    <a href={linkItem.link}>{linkItem.name}</a>
+                                </div>
+                            ))}
                         </div>
                     </div>
                 </div>

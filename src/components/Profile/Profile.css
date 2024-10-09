@@ -154,10 +154,11 @@
 
 .links {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .links-b {
-    width: 300px;
+    width: 233px;
     height: 30px;
     margin: 4px 4px 0 0;
     padding: 4px 15px;
@@ -234,7 +235,7 @@
     }
 
     .links-b {
-        width: 250px;
+        width: 44%;
     }
 
     .links-b a {
@@ -278,7 +279,7 @@
     }
 
     .links-b {
-        width: 220px;
+        width: 39%;
         height: 25px;
     }
 
