@@ -1,0 +1,13 @@
+.not-found-404 a {
+    padding: 10px 40px;
+    background-color: rgb(59, 59, 59);
+    border-radius: 10px;
+    text-decoration: none;
+    color: rgb(146, 146, 146);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.not-found-404 a:hover {
+    background-color: rgb(43, 43, 43);
+    color: rgb(185, 185, 185);
+}

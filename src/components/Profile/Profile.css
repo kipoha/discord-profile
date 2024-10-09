@@ -1,0 +1,303 @@
+
+.profile {
+    width: 600px;
+    margin: 100px auto;
+    border-radius: 5px;
+    padding: 5px;
+    color: #ffffff;
+    background: linear-gradient(180deg, #242235, #7064D6);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.profile-block {
+    background-color: #01030a80;
+    border-radius: 5px;
+    padding-bottom: 1px;
+}
+
+.banner {
+    border-radius: 5px 5px 0 0 ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 200px;
+    position: relative;
+}
+
+.avatar-container {
+    position: absolute;
+    bottom: -50px;
+    left: 20px;
+    width: 100px;
+    height: 100px;
+}
+
+.avatar {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 4px solid #18233d;
+}
+
+.avatar-decoration {
+    position: absolute;
+    top: -6%;
+    left: -6%;
+    width: 120%;
+    height: 120%;
+    pointer-events: none;
+}
+
+.profile-status {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 15px 0 140px;
+}
+
+.user-status {
+    font-size: 15px;
+    background-color: #1b1d227e;
+    border-radius: 10px;
+    border: 1px solid #5252527e;
+    padding: 2px 12px;
+}
+
+.user-button {
+    padding: 2px 30px;
+    background-color: #5a529e;
+    color: #a69df7;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.user-button:hover {
+    background-color: #4d47d1;
+    color: #ffffff;
+}
+
+.profile-info {
+    padding-left: 18px;
+}
+
+.profile-info h1 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.profile-info p {
+    font-size: 16px;
+    color: #b9bbbe;
+    margin-top: -5px;
+}
+
+.profile-meta {
+    display: flex;
+    align-items: center;
+    margin-top: -4%;
+}
+
+.username-pronouns {
+    font-size: 14px;
+    font-weight: bold;
+    color: #939394;
+}
+
+.pronouns {
+    margin-left: 5px;
+}
+
+.profile-badges {
+    margin-left: 15px;
+    display: flex;  
+    align-items: center;
+    background-color: #01030a80;
+    max-height: 25px;
+    border: 1px solid #41434471;
+    border-radius: 8px;
+    padding: 2px;
+}
+
+.profile-badges img {
+    width: 18px;
+    height: 18px;
+    margin: 3px;
+    margin-top: 10px;
+    position: relative;
+}
+
+.profile-badges .badge {
+    display: inline-block;
+}
+
+.profile-info-d {
+    background-color: #01030a8a;
+    padding: 15px;
+    margin: 15px;
+    border-radius: 10px;
+    border: 1px solid #424242be;
+}
+
+.profile-description a {
+    color: #836af5;
+}
+
+.profile-description p,
+.profile-description a {
+    margin: -2px;
+}
+
+
+.profile-description a:hover {
+    color: #7369f5;
+}
+
+.links {
+    display: flex;
+}
+
+.links-b {
+    width: 300px;
+    height: 30px;
+    margin: 4px 4px 0 0;
+    padding: 4px 15px;
+    border-radius: 5px;
+    border: 1px solid #54565e80;
+}
+
+.links-b a {
+    margin-top: 10px;
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.links-b a:hover {
+    color: #99adf570;
+}
+
+.links-b img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+/* Default styles (desktop, tablet) remain unchanged */
+
+/* Media query for larger mobile devices (like tablets and larger phones) */
+@media only screen and (max-width: 768px) {
+    .profile {
+        width: 90%;
+        margin: 50px auto;
+    }
+
+    .avatar-container {
+        width: 80px;
+        height: 80px;
+    }
+
+    .avatar {
+        border: 3px solid #18233d;
+    }
+
+    .banner {
+        height: 150px;
+    }
+
+    .profile-info h1 {
+        font-size: 22px;
+    }
+
+    .profile-info p {
+        font-size: 14px;
+    }
+
+    .user-status {
+        font-size: 14px;
+    }
+
+    .user-button {
+        padding: 2px 20px;
+    }
+
+    .links-b {
+        width: 250px;
+    }
+
+    .links-b a {
+        font-size: 12px;
+    }
+}
+
+/* Media query for smaller mobile devices */
+@media only screen and (max-width: 480px) {
+    .profile {
+        width: 95%;
+        margin: 30px auto;
+    }
+
+    .avatar-container {
+        width: 60px;
+        height: 60px;
+    }
+
+    .avatar {
+        border: 2px solid #18233d;
+    }
+
+    .banner {
+        height: 120px;
+    }
+
+    .profile-info h1 {
+        font-size: 20px;
+    }
+
+    .profile-info p {
+        font-size: 12px;
+    }
+
+    .user-status {
+        font-size: 12px;
+    }
+
+    .user-button {
+        padding: 2px 15px;
+    }
+
+    .links-b {
+        width: 220px;
+        height: 25px;
+    }
+
+    .links-b a {
+        font-size: 10px;
+    }
+
+    .links-b img {
+        width: 18px;
+        height: 18px;
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+.hidden {
+    opacity: 0; 
+    transition: opacity 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
