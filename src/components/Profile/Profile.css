@@ -184,9 +184,20 @@
     vertical-align: middle;
 }
 
-/* Default styles (desktop, tablet) remain unchanged */
+.created_at {
+    display: flex;
+}
 
-/* Media query for larger mobile devices (like tablets and larger phones) */
+.created_at img {
+    width: 18px;
+    height: 18px;
+    margin: 20px 2px 0 0;
+}
+
+.created_at p {
+    margin-left: 5px;
+}
+
 @media only screen and (max-width: 768px) {
     .profile {
         width: 90%;
@@ -231,7 +242,6 @@
     }
 }
 
-/* Media query for smaller mobile devices */
 @media only screen and (max-width: 480px) {
     .profile {
         width: 95%;
@@ -301,3 +311,5 @@
         transform: translateY(0);
     }
 }
+
+
