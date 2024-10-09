@@ -6,7 +6,7 @@ export const userId = '914930212297392129' // ur userID in discord!
 ```
 
 and edit `src/components/Profile/Profile.jsx` as profile description, user status, pronoun and integration are static
-```py
+```jsx
 return (
     <div className="profile">
         <div className={`profile-block fade-in ${!showProfile ? 'hidden' : ''}`}>
@@ -80,4 +80,4 @@ return (
 
 
 ## Preview
-[Image alt](/preview.png)
+![Image alt](./preview.png)
