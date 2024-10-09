@@ -1,6 +1,6 @@
 # React + Vite
 
-edit `src/config.js` as profile description, user status, pronouns and integration are static
+edit [src/config.js](./src/config.js) as profile description, user status, pronouns and integration are static
 ```js
 export const userId = '914930212297392129' // ur userID in discord!
 
