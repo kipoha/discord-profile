@@ -23,6 +23,21 @@
     position: relative;
 }
 
+/* .avatar-container {
+    position: absolute;
+    bottom: -50px;
+    left: 20px;
+    width: 100px;
+    height: 100px;
+}
+
+.avatar {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 4px solid #18233d;
+} */
+
 .avatar-container {
     position: absolute;
     bottom: -50px;
@@ -37,6 +52,27 @@
     border-radius: 50%;
     border: 4px solid #18233d;
 }
+
+.online-status {
+    position: absolute;
+    bottom: -5px;
+    right: -5px;
+    width: 26px; 
+    height: 26px; 
+    background-color: #242235; 
+    border-radius: 50%; 
+    border: 2px solid #18233d; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.online-status img {
+    width: 20px;
+    height: 20px; 
+    border-radius: 50%; 
+}
+
 
 .avatar-decoration {
     position: absolute;
@@ -59,7 +95,8 @@
     background-color: #1b1d227e;
     border-radius: 10px;
     border: 1px solid #5252527e;
-    padding: 2px 12px;
+    padding: 0px 12px;
+    line-height: 1.4px;
 }
 
 .user-button {
@@ -69,6 +106,7 @@
     border-radius: 10px;
     text-decoration: none;
     transition: background-color 0.3s ease, color 0.3s ease;
+    height: 30px;
 }
 
 .user-button:hover {
@@ -77,6 +115,7 @@
 }
 
 .profile-info {
+    margin-top: -15px;
     padding-left: 18px;
 }
 
@@ -130,12 +169,67 @@
     display: inline-block;
 }
 
+
 .profile-info-d {
     background-color: #01030a8a;
     padding: 15px;
     margin: 15px;
     border-radius: 10px;
     border: 1px solid #424242be;
+}
+
+.profile-activities {
+    max-height: 115px;
+    overflow: auto;
+}
+
+.activity-img-block {
+    margin: 10px; 
+}
+
+.profile-activities-img {
+    width: 70px;
+    height: 70px;
+    background-size: cover;
+    border-radius: 10%;
+    margin-right: 10px;
+    position: relative;
+}
+
+.profile-activities-small-img {
+    background-color: #1e2338;
+    padding: 4px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -7px; 
+    right: -7px; 
+}
+
+.profile-activities-small-img img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.activity {
+    display: flex;
+    border-radius: 10px;
+    background-color: #1e2338;
+    margin: 10px 4px;
+    line-height: 3.4px;
+}
+
+.activity-info {
+    margin: 5px 0;
+}
+
+.activity-info h2 {
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+.activity-info p {
+    font-size: 12px;
 }
 
 .profile-description a {
@@ -241,6 +335,17 @@
     .links-b a {
         font-size: 12px;
     }
+
+    .online-status {
+        width: 20px; 
+        height: 20px; 
+    }
+    
+    .online-status img {
+        width: 14px;
+        height: 14px; 
+    }
+    
 }
 
 @media only screen and (max-width: 480px) {
