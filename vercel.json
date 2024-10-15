@@ -1,3 +1,7 @@
 {
-    "redirects": []
-}
+    "redirects": [],
+    "rewrites": [
+      { "source": "/(.*)", "destination": "/" }
+    ]
+  }
+  
