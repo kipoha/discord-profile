@@ -106,7 +106,7 @@ const Profile = () => {
                             userData.activities.slice(1).map((activities, index) => (
                                 <div key={index} className="activity">
                                     <div className="activity-img-block">
-                                        <div className="profile-activities-img" style={{
+                                        {/* <div className="profile-activities-img" style={{
                                             backgroundImage: activities.assets?.large_image
                                             ? (
                                                 activities.assets.large_image.startsWith('mp:external')
@@ -134,7 +134,37 @@ const Profile = () => {
                                                     </div>
                                                 )
                                             )}
+                                        </div> */}
+                                        {activities.assets?.large_image && (
+                                        <div className="profile-activities-img" 
+                                            style={{
+                                                backgroundImage: activities.assets.large_image.startsWith('mp:external')
+                                                    ? `url(https://media.discordapp.net/external/${activities.assets.large_image.split('mp:external/')[1]})`
+                                                    : `url(https://cdn.discordapp.com/app-assets/${activities.application_id}/${activities.assets.large_image}.png)`
+                                            }}
+                                        >
+                                            {activities.assets?.small_image && (
+                                                activities.assets.small_image.startsWith('mp:external') ? (
+                                                    <div className="profile-activities-small-img">
+                                                        <img
+                                                            src={`https://media.discordapp.net/external/${activities.assets.small_image.split('mp:external/')[1]}`}
+                                                            alt={activities.small_text || 'Activity Small'}
+                                                            onError={(e) => e.target.style.display = 'none'}  // Скрыть, если изображение не загрузилось
+                                                        />
+                                                    </div>
+                                                ) : (
+                                                    <div className="profile-activities-small-img">
+                                                        <img
+                                                            src={`https://cdn.discordapp.com/app-assets/${activities.application_id}/${activities.assets.small_image}.png`}
+                                                            alt={activities.small_text || 'Activity Small'}
+                                                            onError={(e) => e.target.style.display = 'none'}  // Скрыть, если изображение не загрузилось
+                                                        />
+                                                    </div>
+                                                )
+                                            )}
                                         </div>
+                                    )}
+
                                     </div>
                                     <div className="activity-info">
                                         <h2>{activities.name || ''}</h2>
