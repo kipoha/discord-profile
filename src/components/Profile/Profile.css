@@ -1,4 +1,3 @@
-
 .profile {
     width: 600px;
     margin: 100px auto;
@@ -23,21 +22,6 @@
     position: relative;
 }
 
-/* .avatar-container {
-    position: absolute;
-    bottom: -50px;
-    left: 20px;
-    width: 100px;
-    height: 100px;
-}
-
-.avatar {
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    border: 4px solid #18233d;
-} */
-
 .avatar-container {
     position: absolute;
     bottom: -50px;
@@ -55,21 +39,20 @@
 
 .online-status {
     position: absolute;
-    bottom: -5px;
-    right: -5px;
-    width: 26px; 
-    height: 26px; 
-    background-color: #242235; 
+    bottom: -6px;
+    right: -6px;
+    width: 34px; 
+    height: 34px; 
+    background-color: #18233d; 
     border-radius: 50%; 
-    border: 2px solid #18233d; 
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .online-status img {
-    width: 20px;
-    height: 20px; 
+    width: 24px;
+    height: 24px; 
     border-radius: 50%; 
 }
 

@@ -15,11 +15,14 @@ const Profile = () => {
     const [badges, setBadges] = useState([])
     const [created_at, setCreatedAt] = useState(null)
     const [avatar_decoration, setAvatar_decoration] = useState(null)
+    const [success, setSuccess] = useState(false)
 
-    useEffect(() => {
-        const fetchData = async () => {
+    const fetchData = async () => {
+        try {
             const data = await getData()
+            console.log('Fetched data:', data)
             setUserData(data.data)
+            setSuccess(data.success)
 
             const mediaData = await getBannerAvatarBadgesCTDec()
             setBanner(mediaData.banner)
@@ -27,19 +30,32 @@ const Profile = () => {
             setBadges(mediaData.badges)
             setCreatedAt(mediaData.created_at)
             setAvatar_decoration(mediaData.avatar_decoration)
-
+        } catch (error) {
+            console.error('Error fetching data:', error)
+        } finally {
             setLoading(false)
-            
             setTimeout(() => {
                 setShowProfile(true)
             }, 500)
         }
+    }
 
+    useEffect(() => {
         fetchData()
+
+        const interval = setInterval(() => {
+            fetchData()
+        }, 100)
+
+        return () => clearInterval(interval)
     }, [])
 
     if (loading) {
         return <Loader loading={loading}/>
+    }
+
+    if (!success) {
+        return <h1>No data</h1>
     }
 
     const avatarUrl = avatar
