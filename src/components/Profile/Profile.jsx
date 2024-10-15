@@ -137,8 +137,8 @@ const Profile = () => {
                                         </div>
                                     </div>
                                     <div className="activity-info">
-                                        <h2>{activities.name}</h2>
-                                        <p>{activities.state}</p>
+                                        <h2>{activities.name || ''}</h2>
+                                        <p>{activities.state || ''}</p>
                                         <p>{activities.details || ''}</p>
                                         
                                         {activities.timestamps ? (
