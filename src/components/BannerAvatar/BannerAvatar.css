@@ -1,0 +1,89 @@
+.banner {
+    border-radius: 5px 5px 0 0 ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 200px;
+    position: relative;
+}
+
+.avatar-container {
+    position: absolute;
+    bottom: -50px;
+    left: 20px;
+    width: 100px;
+    height: 100px;
+}
+
+.avatar {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.online-status {
+    position: absolute;
+    bottom: -6px;
+    right: -6px;
+    width: 34px; 
+    height: 34px; 
+    border-radius: 50%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.online-status img {
+    width: 24px;
+    height: 24px; 
+    border-radius: 50%; 
+}
+
+.avatar-decoration {
+    position: absolute;
+    top: -6%;
+    left: -6%;
+    width: 120%;
+    height: 120%;
+    pointer-events: none;
+}
+
+@media only screen and (max-width: 768px) {
+    .avatar-container {
+        width: 80px;
+        height: 80px;
+        bottom: -30px;
+    }
+
+    .avatar {
+        border: 3px solid #18233d;
+    }
+
+    .banner {
+        height: 150px;
+    }
+    
+    .online-status {
+        width: 20px; 
+        height: 20px; 
+    }
+    
+    .online-status img {
+        width: 14px;
+        height: 14px; 
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .avatar-container {
+        width: 70px;
+        height: 70px;
+    }
+
+    .avatar {
+        border: 2px solid #18233d;
+    }
+
+    .banner {
+        height: 120px;
+    }    
+}

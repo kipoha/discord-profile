@@ -1,0 +1,68 @@
+.profile-status {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 15px 0 140px;
+}
+
+.user-status {
+    display: flex;
+    font-size: 15px;
+    background-color: #1b1d227e;
+    border-radius: 10px;
+    border: 1px solid #5252527e;
+    padding: 0px 12px;
+    line-height: 1.4px;
+    align-items: center;
+}
+
+.user-status img {
+    width: 20px;
+    height: 20px;
+}
+
+.user-button {
+    padding: 2px 30px;
+    color: #fff;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    height: 30px;
+}
+
+.user-button:hover {
+    color: #adadad;
+}
+
+@media only screen and (max-width: 768px) {
+    .profile-status {
+        padding: 0 15px 0 120px;
+    }
+
+    .user-status {
+        font-size: 14px;
+    }
+
+    .user-button {
+        padding: 2px 20px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .profile-status {
+        padding: 0 15px 0 100px;
+    }
+
+    .profile {
+        width: 95%;
+        margin: 30px auto;
+    }
+
+    .user-status {
+        font-size: 12px;
+    }
+
+    .user-button {
+        padding: 2px 15px;
+    }
+}

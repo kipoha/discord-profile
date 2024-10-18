@@ -1,0 +1,74 @@
+.profile-info {
+    margin-top: -15px;
+    padding-left: 18px;
+}
+
+.profile-info h1 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.profile-info p {
+    font-size: 16px;
+    color: #b9bbbe;
+    margin-top: -5px;
+}
+
+.profile-meta {
+    display: flex;
+    align-items: center;
+    margin-top: -4%;
+}
+
+.username-pronouns {
+    font-size: 14px;
+    font-weight: bold;
+    color: #939394;
+}
+
+.pronouns {
+    margin-left: 5px;
+}
+
+.profile-badges {
+    margin-left: 15px;
+    display: flex;  
+    align-items: center;
+    background-color: #01030a80;
+    max-height: 25px;
+    border: 1px solid #41434471;
+    border-radius: 8px;
+    padding: 2px;
+}
+
+.profile-badges img {
+    width: 18px;
+    height: 18px;
+    margin: 3px;
+    margin-top: 10px;
+    position: relative;
+}
+
+.profile-badges .badge {
+    display: inline-block;
+}
+
+@media only screen and (max-width: 768px) {
+    .profile-info h1 {
+        font-size: 22px;
+    }
+
+    .profile-info p {
+        font-size: 14px;
+    }    
+}
+
+@media only screen and (max-width: 480px) {
+    .profile-info h1 {
+        font-size: 20px;
+    }
+
+    .profile-info p {
+        font-size: 12px;
+    }
+}

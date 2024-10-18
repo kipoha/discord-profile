@@ -1,0 +1,68 @@
+.main-links {
+    background-color: #1a1a1a;
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 500px;
+    margin: 0 auto;
+    width: 100%;
+    gap: 30px;
+    opacity: 0; 
+    transform: translateY(50px);
+    animation: slideUp 1.4s ease-out forwards;
+}
+
+.main-links a {
+    font-size: 14px;
+    font-weight: bold;
+    padding: 10px 20px;
+    background-color: #333333;
+    color: white;
+    border-radius: 20px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-align: center;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-links a:hover {
+    background-color: #646464;
+    transform: translateY(-3px);
+}
+
+.main-links a:active {
+    transform: translateY(0);
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .main-links {
+        width: 95%;
+    }
+
+    .main-links a {
+        font-size: 12px;
+        padding: 8px 15px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .main-links {
+        width: 90%;
+    }
+}

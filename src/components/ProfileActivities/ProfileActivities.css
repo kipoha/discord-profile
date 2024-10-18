@@ -1,0 +1,51 @@
+.profile-activities {
+    max-height: 115px;
+    overflow: auto;
+}
+
+.activity-img-block {
+    margin: 10px; 
+}
+
+.profile-activities-img {
+    width: 70px;
+    height: 70px;
+    background-size: cover;
+    border-radius: 10%;
+    margin-right: 10px;
+    position: relative;
+}
+
+.profile-activities-small-img {
+    padding: 4px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -7px; 
+    right: -7px; 
+}
+
+.profile-activities-small-img img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.activity {
+    display: flex;
+    border-radius: 10px;
+    margin: 10px 4px;
+    line-height: 3.4px;
+}
+
+.activity-info {
+    margin: 5px 0;
+}
+
+.activity-info h2 {
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+.activity-info p {
+    font-size: 12px;
+}
