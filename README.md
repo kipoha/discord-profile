@@ -34,6 +34,8 @@ export const badgeIcons = { //badges and path to img
 ![Image alt](./preview.png)
 
 
+> [!CAUTION]  
+> for everything to work, you need to join a [guild](https://discord.gg/lanyard)
 
 
 
