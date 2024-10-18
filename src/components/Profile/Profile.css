@@ -91,7 +91,6 @@
 
 .user-button {
     padding: 2px 30px;
-    /* background-color: #5a529e; */
     color: #fff;
     border-radius: 10px;
     text-decoration: none;
@@ -283,6 +282,9 @@
 }
 
 @media only screen and (max-width: 768px) {
+    .profile-status {
+        padding: 0 15px 0 120px;
+    }
     .profile {
         width: 90%;
         margin: 50px auto;
@@ -338,6 +340,10 @@
 }
 
 @media only screen and (max-width: 480px) {
+    .profile-status {
+        padding: 0 15px 0 100px;
+    }
+
     .profile {
         width: 95%;
         margin: 30px auto;
