@@ -4,7 +4,7 @@
     border-radius: 5px;
     padding: 5px;
     color: #ffffff;
-    background: linear-gradient(180deg, #242235, #7064D6);
+    /* background: linear-gradient(180deg, #242235, #7064D6); */
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
@@ -34,7 +34,7 @@
     width: 100%;
     height: 100%;
     border-radius: 50%;
-    border: 4px solid #18233d;
+    /* border: 4px solid #18233d; */
 }
 
 .online-status {
@@ -43,7 +43,7 @@
     right: -6px;
     width: 34px; 
     height: 34px; 
-    background-color: #18233d; 
+    /* background-color: #18233d;  */
     border-radius: 50%; 
     display: flex;
     justify-content: center;
@@ -74,18 +74,25 @@
 }
 
 .user-status {
+    display: flex;
     font-size: 15px;
     background-color: #1b1d227e;
     border-radius: 10px;
     border: 1px solid #5252527e;
     padding: 0px 12px;
     line-height: 1.4px;
+    align-items: center;
+}
+
+.user-status img {
+    width: 20px;
+    height: 20px;
 }
 
 .user-button {
     padding: 2px 30px;
-    background-color: #5a529e;
-    color: #a69df7;
+    /* background-color: #5a529e; */
+    color: #fff;
     border-radius: 10px;
     text-decoration: none;
     transition: background-color 0.3s ease, color 0.3s ease;
@@ -93,8 +100,7 @@
 }
 
 .user-button:hover {
-    background-color: #4d47d1;
-    color: #ffffff;
+    color: #adadad;
 }
 
 .profile-info {
@@ -180,7 +186,7 @@
 }
 
 .profile-activities-small-img {
-    background-color: #1e2338;
+    /* background-color: #1e2338; */
     padding: 4px;
     border-radius: 50%;
     position: absolute;
@@ -197,7 +203,7 @@
 .activity {
     display: flex;
     border-radius: 10px;
-    background-color: #1e2338;
+    /* background-color: #1e2338; */
     margin: 10px 4px;
     line-height: 3.4px;
 }
