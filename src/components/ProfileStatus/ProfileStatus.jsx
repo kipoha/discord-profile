@@ -2,7 +2,7 @@ import { buttonLink, buttonName } from "../../config"
 import { splitTextIntoLines } from "../../func/renderText"
 import './ProfileStatus.css'
 
-const ProfileStatus = ({ activities, emoji, color }) => {
+const ProfileStatus = ({ activities, emoji }) => {
     return (
         <div className="profile-status">
             {activities?.length > 0 && (
@@ -11,11 +11,11 @@ const ProfileStatus = ({ activities, emoji, color }) => {
                         <img src={emoji} alt="Activity Emoji" />
                     )}
                     {activities[0]?.state && (
-                        <p>{splitTextIntoLines(activities[0]?.state)}</p>
+                        <div>{splitTextIntoLines(activities[0]?.state)}</div>
                     )}
                 </div>
             )}
-            <a className="user-button" style={{ backgroundColor: color }} href={buttonLink}>{buttonName}</a>
+            <a className="user-button" href={buttonLink}>{buttonName}</a>
         </div>
     )
 }

@@ -9,8 +9,8 @@ import offline from './assets/status/offline.png'
 
 export const userId = '914930212297392129'
 
-export const buttonName = 'Menero'
-export const buttonLink = 'https://menero.kipoha.fun/'
+export const buttonName = 'Discord'
+export const buttonLink = `https://discord.com/users/${userId}`
 
 export const promouns = "- void, core, null, not exist, kip"
 

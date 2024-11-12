@@ -1,7 +1,16 @@
+import { useState, useEffect } from 'react'
 import { formatDuration } from "../../func/renderText"
 import './ProfileActivities.css'
 
 const ProfileActivities = ({ activity, color }) => {
+    const [currentTime, setCurrentTime] = useState(Date.now())
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrentTime(Date.now())
+        }, 1000)
+        return () => clearInterval(interval)
+    }, [])
     return (
         <div className="profile-activities">
             {activity && activity.length > 1 ? (

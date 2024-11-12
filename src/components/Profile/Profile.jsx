@@ -48,12 +48,6 @@ const Profile = () => {
 
     useEffect(() => {
         fetchData()
-
-        const interval = setInterval(() => {
-            fetchData()
-        }, 100)
-
-        return () => clearInterval(interval)
     }, [])
 
     useEffect(() => {
@@ -64,17 +58,17 @@ const Profile = () => {
 
             img.onload = () => {
                 const colorThief = new ColorThief()
-                const colors = colorThief.getPalette(img, 2)
+                const colors = colorThief.getPalette(img, 20)
                 
                 if (colors && colors.length >= 2) {                    
                     const color1Hex = rgbToHex(colors[0][0], colors[0][1], colors[0][2])
                     const color2Hex = rgbToHex(colors[1][0], colors[1][1], colors[1][2])
                     
-                    const darkenedColor1 = darkenColor(color1Hex, 50)
-                    const darkenedColor2 = darkenColor(color1Hex, 70)
+                    // const darkenedColor1 = darkenColor(color1Hex, 10)
+                    const darkenedColor2 = darkenColor(color2Hex, 20)
                     setGradient(`linear-gradient(180deg, rgb(${colors[0].join(',')}), rgb(${colors[1].join(',')}))`)
-                    setColor1(darkenedColor1)
-                    setColor2(darkenedColor2)
+                    setColor1(color1Hex)
+                    setColor2(color2Hex)
                 }
             }
 
@@ -104,14 +98,14 @@ const Profile = () => {
                     bannerUrl={bannerUrl}
                     avatarUrl={avatarUrl}
                     avatarDecorationUrl={avatarDecorationUrl}
-                    color={color1}
                     username={userData.discord_user.username}
                     discordStatus={userData.discord_status}
+                    color={color1}
                 />
-                <ProfileStatus activities={userData.activities} emoji={emoji} color={color1} />
+                <ProfileStatus activities={userData.activities} emoji={emoji} />
                 <ProfileInfo globalName={userData.discord_user.global_name} username={userData.discord_user.username} badges={badges}/>
                 <div className="profile-info-d">
-                    <ProfileActivities activity={userData.activities} color={color1}/>
+                    <ProfileActivities activity={userData.activities} color={color2} />
                     <ProfileLinks created_at={created_at} />
                 </div>
             </div>

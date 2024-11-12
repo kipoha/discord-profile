@@ -17,6 +17,8 @@
 }
 
 .profile-activities-small-img {
+    width: 26px;
+    height: 26px;
     padding: 4px;
     border-radius: 50%;
     position: absolute;
@@ -25,8 +27,8 @@
 }
 
 .profile-activities-small-img img {
-    width: 30px;
-    height: 30px;
+    width: 26px;
+    height: 26px;
     border-radius: 50%;
 }
 
